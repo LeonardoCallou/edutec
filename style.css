@@ -263,3 +263,45 @@ footer {
   border-top: 1px solid var(--divider);
   margin: 0 clamp(24px, 4vw, 64px) clamp(24px, 4vw, 64px);
 }
+
+.inicio {
+  height:100vh ;
+  width: 100%;
+
+background-image: url(/imagens/WhatsApp\ Image\ 2026-08-30\ at\ 08.49.01.jpeg);
+background-size: cover;
+background-position: center;
+background-repeat:no-repeat;
+ position: relative;
+}
+
+.conteudo {
+  position: absolute;
+  left: 5%;
+  bottom: 8%;
+  color: white;
+
+}
+
+.conteudo h1 {
+  font-size: 50px;
+  line-height: 1.05;
+  margin: 0;
+} 
+
+.conteudo p {
+  margin-top: 25px;
+  font-size: 14px;
+  
+}
+
+.preto{
+
+   height:30vh ;
+  width: 100%;
+background-image: url(/imagens/foto4.png);
+background-size: cover;
+background-position: center;
+background-repeat:no-repeat;
+ position: relative;
+}
