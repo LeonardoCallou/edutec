@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #060c1e;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+/* ===== HEADER ===== */
+
+header {
+    width: 100%;
+    height: 105px;
+    background: #142357;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 65px;
+
+    border-bottom: 1px solid #24398f;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.header-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: white;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+/* TÍTULO E IMAGENS */
+
+.causas {
+    width: 100%;
+    padding: 35px 7%;
+}
+
+.causas h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.imagens {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.imagens img {
+    width: 100%;
+    height: 285px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* TEXTOS */
+
+.texto {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+article {
+    border-top: 1px solid #777;
+    padding: 25px 0 40px;
+}
+
+article h2 {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+article h3 {
+    color: #aaa;
+    text-decoration: underline;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+article p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.35;
+    margin-bottom: 3px;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    width: 100%;
+    background: white;
+    color: #111;
+
+    min-height: 180px;
+    padding: 35px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer h2 {
+    font-size: 13px;
+}
+
+footer p {
+    font-size: 9px;
+    max-width: 400px;
+    margin-top: 8px;
+}
+
+.logo-final {
+    font-size: 50px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 15px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .causas {
+        padding: 30px 5%;
+    }
+
+    .imagens {
+        grid-template-columns: 1fr;
+    }
+
+    .imagens img {
+        height: 220px;
+    }
+
+    .texto {
+        width: 85%;
+    }
+
+    footer {
+        padding: 30px 5%;
+    }
+}
+
+
+.logo1 img{
+         width: 50px;
+    position: absolute;
+    right: 70px;
+
+    
+}
+
+.hr {
+
+  position: absolute;
+  bottom: 70px;
+  left: 50px;
+  right: 60px;
+  border: none;
+  border-top: 9px solid #000000;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-icon {
+    width: 45px;
+    height: 45px;
+}
+
+.header-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}   
