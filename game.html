@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salve o Planeta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+<div class="viewport" id="viewport">
+<main class="stage" id="stage">
+
+  <!-- Caixa esquerda -->
+  <aside class="panel" aria-label="Como pontuar">
+    <h2 class="plain" style="margin-top:0">Como pontuar</h2>
+
+    <div class="row"><span class="ico" aria-hidden="true">🌿☀️♻️</span><span class="pts good">+2</span></div>
+    <p>Item bom que passa e cai no planeta.</p>
+
+    <div class="row"><span class="ico" aria-hidden="true">💨🔥</span><span class="pts good">+1</span></div>
+    <p>Item ruim que você pega.</p>
+
+    <div class="row"><span class="ico" aria-hidden="true">🌿☀️♻️</span><span class="pts zero">0</span></div>
+    <p>Item bom que você pega: nada muda.</p>
+
+    <div class="row"><span class="ico" aria-hidden="true">💨🔥</span><span class="pts bad">-10</span></div>
+    <p>Item ruim que cai no planeta.</p>
+
+    <p class="tight">Você começa com 0 pontos.</p>
+
+    <h2 class="good" style="margin-top:20px">Como vencer</h2>
+    <p class="tight">Chegue a 70 pts ou mais e você e o Marcinho salvam o planeta!</p>
+
+    <h2 class="bad">Como perder</h2>
+    <p class="last">Depois que os itens ruins começarem a cair, se sua pontuação chegar a 0 ou menos, você perde.</p>
+  </aside>
+
+  <!-- Jogo -->
+  <section class="game-col">
+    <div class="game" id="game">
+      <canvas id="c" width="380" height="680" aria-label="Área do jogo"></canvas>
+
+      <div class="hud">
+        <div class="score"><span id="score">0</span> pts</div>
+        <button class="pause-btn" id="pauseBtn" type="button" aria-label="Pausar (Espaço)" title="Pausar (Espaço)"><i></i><i></i></button>
+      </div>
+
+      <div class="hint" id="hint">SETAS OU ARRASTE PARA MOVER<br>DEIXE OS BONS PASSAREM<br>PEGUE OS RUINS<br>ESPAÇO PARA PAUSAR</div>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+      <div class="overlay start" id="ovStart"><div class="title">Clique em<br>jogar</div></div>
+
+      <div class="overlay dim" id="ovPause" hidden>
+        <div class="title">Pausado</div>
+        <div class="menu">
+          <button class="btn" type="button" data-act="resume">Retomar</button>
+          <button class="btn" type="button" data-act="restart">Reiniciar</button>
+          <button class="btn" type="button" data-act="exit">Sair</button>
+        </div>
+      </div>
+
+      <div class="overlay dim" id="ovOver" hidden>
+        <div class="title" id="endTitle">Você perdeu</div>
+        <div class="sub" id="endSub">Os itens ruins chegaram ao planeta.</div>
+        <div class="menu">
+          <button class="btn" type="button" data-act="restart">Reiniciar</button>
+          <button class="btn" type="button" data-act="exit">Sair</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn play" id="playBtn" type="button">Jogar</button>
+  </section>
+
+  <!-- Caixa direita -->
+  <aside class="panel" aria-label="O que pegar e o que deixar passar">
+    <h2 class="good" style="margin-top:0">Deixe passar</h2>
+    <div class="row item"><span class="ico" aria-hidden="true">🌿</span>Plantas</div>
+    <div class="row item"><span class="ico" aria-hidden="true">&#x2600;&#xFE0F;</span>Energia solar</div>
+    <div class="row item"><span class="ico" aria-hidden="true">&#x267B;&#xFE0F;</span>Reciclagem</div>
+    <p>Eles ajudam o planeta. Deixe todos caírem nele!</p>
+
+    <h2 class="bad" style="margin-top:0">Pegue</h2>
+    <div class="row item"><span class="ico" aria-hidden="true">💨</span>Poluição</div>
+    <div class="row item"><span class="ico" aria-hidden="true">🔥</span>Queimadas</div>
+    <p>Eles esquentam a Terra. Não deixe nenhum chegar nela!</p>
+
+    <h2 class="warn" style="margin-top:0">Dificuldade</h2>
+    <p class="tight">Aos 10 pts surgem os itens ruins e tudo acelera.</p>
+    <p class="tight">Caem mais itens ruins do que bons.</p>
+    <p>Com o tempo, a velocidade só aumenta.</p>
+
+    <h2 class="plain" style="margin-top:0">Teclas</h2>
+    <div class="keys"><kbd>Espaço</kbd> pausar</div>
+    <div class="keys"><kbd>←</kbd><kbd>→</kbd> ou <kbd>A</kbd><kbd>D</kbd> mover</div>
+  </aside>
+
+</main>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
